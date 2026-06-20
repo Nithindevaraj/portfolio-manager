@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio_manager
+
     steps:
       - uses: actions/checkout@v4
 
@@ -31,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MyPortfolio-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: investment_app/build/app/outputs/flutter-apk/app-release.apk
